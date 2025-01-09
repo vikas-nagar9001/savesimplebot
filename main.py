@@ -6,22 +6,22 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import time
 import os
 import threading
-import json
 from os import environ
+from config import API_ID, API_HASH, BOT_TOKEN,SESSION_STRING
 
-# bot_token = environ.get("TOKEN", "") 
-# api_hash = environ.get("HASH", "") 
-# api_id = int(os.environ.get("ID", "0"))  # Default to 0 if "ID" is not set
+#OR YOU CAN SET MANUALLY
 
-bot_token = "7893526740:AAGD5lPUMnFnsuQcxN_pn1ONxVoJWEdnj08"  # Replace with your bot token
-api_hash = "ac0d702e4ec6b2d5c232cb5a7e0b7619"  # Replace with your API hash
-api_id = 24732393  # Replace with your API ID
+# BOT_TOKEN = 
+# API_ID = 
+# API_HASH = 
+# SESSION_STRING = 
 
-bot = Client("mybot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
-ss = environ.get("STRING", "")
-if ss is not None:
-    acc = Client("myacc", api_id=api_id, api_hash=api_hash, session_string=ss)
+bot = Client("mybot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+
+
+if SESSION_STRING is not None:
+    acc = Client("myacc",api_id=API_ID, api_hash=API_HASH, session_string=SESSION_STRING)
     acc.start()
 else:
     acc = None
