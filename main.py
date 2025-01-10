@@ -38,7 +38,8 @@ def downstatus(statusfile, message):
             txt = downread.read()
         try:
             bot.edit_message_text(message.chat.id, message.id, f"__Downloaded__ : **{txt}**")
-            time.sleep(10)
+            time.sleep(10)  
+
         except:
             time.sleep(5)
 
@@ -157,10 +158,35 @@ async def save(client: pyrogram.client.Client, message: pyrogram.types.messages_
 
 
 # handle private
+# Handle private messages
 async def handle_private(message: pyrogram.types.messages_and_media.message.Message, chatid: int, msgid: int):
-    msg: pyrogram.types.messages_and_media.message.Message = await acc.get_messages(chatid, msgid)
-    msg_type = get_message_type(msg)
+    try:
+        # Debugging: Print chatid and msgid
+        print(f"Chat ID: {chatid}, Message ID: {msgid}")
 
+        # Ensure bot can access the chat
+        try:
+            chat = await acc.get_chat(chatid)
+            print(f"Chat Info Accessible")
+        except Exception as e:
+            print(f"Chat access error: {e}")
+            await bot.send_message(message.chat.id,f"Error: String session user didn't joined the chat \n{e}")
+            return
+
+        # Fetch the message
+        msg: pyrogram.types.messages_and_media.message.Message = await acc.get_messages(chatid, msgid)
+    except ValueError as e:
+        await bot.send_message(message.chat.id, f"Error: {e}")
+        return
+    except Exception as e:
+        await bot.send_message(message.chat.id, f"Unexpected Error: {e}")
+        return
+
+    # Determine message type
+    msg_type = get_message_type(msg)
+    print(f"Message Type: {msg_type}")
+
+    # Handle message types
     if "Text" == msg_type:
         await bot.send_message(message.chat.id, msg.text, entities=msg.entities, reply_to_message_id=message.id)
         return
