@@ -15,3 +15,9 @@ API_HASH = os.environ.get("API_HASH", "")
 # Your API Hash from my.telegram.org
 SESSION_STRING = os.environ.get("SESSION_STRING", "")
 
+
+
+
+
+# Don't Remove Credit Tg - @Mod_Mick
+# Ask Doubt on telegram @Mod_Mick

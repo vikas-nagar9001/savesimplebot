@@ -69,7 +69,7 @@ def progress(current, total, message, type):
 # start command
 @bot.on_message(filters.command(["start"]))
 async def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-    await bot.send_message(message.chat.id, f"**__👋 Hi** **{message.from_user.mention}**, **I am Save Restricted Bot, I can send you restricted content by its post link__**\n\n{USAGE}",
+    await bot.send_message(message.chat.id, f"**__👋 Hi** **{message.from_user.mention}**, **I am MOD_MICK Save Restricted Bot, I can send you restricted content by its post link__**\n\n{USAGE}",
                            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🌐 Follow Developer", url="https://instagram.com/itz_.nagar")]]), reply_to_message_id=message.id)
 
 
@@ -294,8 +294,14 @@ then send post/s link__**
 
 **__note that space in between doesn't matter__**
 
-**Made By Vikas**
+**Made By @Mod_Mick**
 """
 
 # infinity polling
 bot.run()
+
+
+
+
+# Don't Remove Credit Tg - @Mod_Mick
+# Ask Doubt on telegram @Mod_Mick

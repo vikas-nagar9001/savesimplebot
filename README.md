@@ -1,17 +1,17 @@
-# Save Restricted Bot
-
+# Mod_Mick Save Restricted Bot
+ 
 *A Telegram Bot, Which can send you restricted content by it's post link*
 
 ---
 
-### Use Login Branch Here - [TechVJ-Login](https://github.com/VJBots/VJ-Save-Restricted-Content/tree/TechVJ-Login)
+### YOU CAN SET VARIABLES IN CONFIG OR DIRECT HOSTING PLATFORM ENVIRONMENT VARIABLES
 
 ## Variables
 
-- `HASH` Your API Hash from my.telegram.org
-- `ID` Your API ID from my.telegram.org
-- `TOKEN` Your bot token from [BotFather](https://telegram.me/BotFather)
-- `STRING` Your pyrogram session string, you can get it from [VJ String Session Generator Bot](https://telegram.me/VJStringSessionBot)
+- `API_HASH` Your API Hash from my.telegram.org
+- `API_ID` Your API ID from my.telegram.org
+- `BOT_TOKEN` Your bot token from [BotFather](https://telegram.me/BotFather)
+- `SESSION_STRING` Your pyrogram session string
 
 ---
 
@@ -51,5 +51,8 @@ _note that space in between doesn't matter_
 
 ### Credits
 
-- [BipinKrish](https://github.com/bipinkrish)
-- [Tech VJ](https://telegram.dog/Kingvj01)
+- Don't Remove Credit Tg - @Mod_Mick
+- Ask Doubt on telegram @Mod_Mick
+
+# Don't Remove Credit Tg - @Mod_Mick
+# Ask Doubt on telegram @Mod_Mick
